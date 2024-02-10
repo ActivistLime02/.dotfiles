@@ -229,6 +229,13 @@ input "1133:16511:Logitech_G502" {
     accel_profile flat
 }
 
+input "1267:12511:ELAN1405:00_04F3:30DF_Touchpad" {
+    accel_profile flat
+    drag enabled
+    natural_scroll enabled
+    tap enabled
+}
+
 # Display
 #output "LG Electronics LG TV SSCR2 0x00000101" {
 #    mode 3840x2160@120.00Hz
