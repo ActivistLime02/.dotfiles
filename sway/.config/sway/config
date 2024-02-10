@@ -223,6 +223,7 @@ bindsym Print exec /usr/bin/flameshot gui
 
 # Titelbar verwijderen en borders
 for_window [class="^.*"] border pixel 2
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
 
 # Mouse settings
 input "1133:16511:Logitech_G502" {
@@ -237,13 +238,16 @@ input "1267:12511:ELAN1405:00_04F3:30DF_Touchpad" {
 }
 
 # Display
-#output "LG Electronics LG TV SSCR2 0x00000101" {
-#    mode 3840x2160@120.00Hz
-#}
-output DP-2 pos 1920 0 res 3840x2160@120.00Hz
-output HDMI-A-2 pos 0 540 res 1920x1080
+output "LG Electronics LG TV SSCR2 0x00000101" {
+    mode 3840x2160@120.00Hz
+    pos 1920 0
+}
+output "Acer Technologies R271 T60EE0032410" {
+    mode 1920x1080@60.00Hz
+    pos 0 540
+}
 
-workspace 10 output HDMI-A-2
+workspace 10 output "Acer Technologies R271 T60EE0032410"
 
 # Autostart
 #exec --no-startup-id copyq
