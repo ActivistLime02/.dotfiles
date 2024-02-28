@@ -251,6 +251,7 @@ workspace 10 output "Acer Technologies R271 T60EE0032410"
 
 # Autostart
 #exec copyq
+exec wl-paste --watch cliphist store
 exec pasystray
 exec dunst
 #exec fcitx5
