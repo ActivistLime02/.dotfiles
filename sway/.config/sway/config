@@ -216,6 +216,8 @@ smart_borders on
 bindsym $mod+F1 exec /usr/bin/firefox
 bindsym $mod+F3 exec /usr/bin/dolphin
 bindsym $mod+b exec /usr/bin/bitwarden-desktop
+bindsym $mod+question exec /usr/bin/dunstctl history-pop
+
 
 bindsym Print exec /usr/bin/flameshot gui
 
