@@ -91,6 +91,9 @@ bindsym $mod+z split h
 # split in vertical orientation
 bindsym $mod+v split v
 
+# reset split
+bindsym $mod+x split none
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -224,6 +227,10 @@ bindsym Print exec /usr/bin/flameshot gui
 # Titelbar verwijderen en borders
 for_window [class="^.*"] border pixel 2
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+# Make things float
+for_window [app_id="org.kde.kcalc"] floating enable
+for_window [app_id="org.kde.kcalc"] nofocus
 
 # Mouse settings
 input "1133:16511:Logitech_G502" {
