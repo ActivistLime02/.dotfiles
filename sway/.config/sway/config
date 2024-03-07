@@ -220,6 +220,7 @@ bindsym $mod+F1 exec /usr/bin/firefox
 bindsym $mod+F3 exec /usr/bin/dolphin
 bindsym $mod+b exec /usr/bin/bitwarden-desktop
 bindsym $mod+question exec /usr/bin/dunstctl history-pop
+bindsym $mod+Shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
 
 bindsym Print exec /usr/bin/flameshot gui
