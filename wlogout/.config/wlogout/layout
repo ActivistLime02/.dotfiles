@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "swaylock",
+    "action" : "swaylock -f -i ~/Pictures/arknights-seseren-3990204947.png -s fit",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "swaylock -f && systemctl suspend",
+    "action" : "swaylock -f -i ~/Pictures/arknights-seseren-3990204947.png -s fit && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }

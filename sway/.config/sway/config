@@ -31,7 +31,7 @@ include /etc/sway/config.d/*
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec swayidle -w \
-	timeout 300 'swaylock -f' \
+	timeout 300 'swaylock -f -i ~/Pictures/arknights-seseren-3990204947.png -s fit' \
 	timeout 600 'swaymsg "output * power off"' \
 	resume 'swaymsg "output * power on"'
 
@@ -242,6 +242,7 @@ input "1267:12511:ELAN1405:00_04F3:30DF_Touchpad" {
     accel_profile flat
     drag enabled
     natural_scroll enabled
+    pointer_accel 0.5
     tap enabled
 }
 
@@ -264,5 +265,6 @@ exec pasystray
 exec dunst
 #exec fcitx5
 #exec wpaperd
-exec ~/.config/sway/swaybg-wallpaper.sh
+exec swaybg -i ~/Pictures/kde-NEXT.png
+#exec ~/.config/sway/swaybg-wallpaper.sh
 exec playerctld daemon
