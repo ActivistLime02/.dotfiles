@@ -287,3 +287,4 @@ exec dunst
 exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
 exec playerctld daemon
+exec /usr/lib/pam_kwallet_init

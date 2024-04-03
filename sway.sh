@@ -1,4 +1,5 @@
 #!/bin/bash
+eval $(keychain --eval --quiet id_ed25519 ~/.ssh/lvl27-nick)
 val=$(udevadm info -a -n /dev/dri/card1 | grep boot_vga | rev | cut -c 2)
 WRL_DRM_DEVICES="/dev/dri/card$val" \
     XDG_CURRENT_DESKTOP=sway \
