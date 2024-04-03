@@ -232,7 +232,6 @@ bindsym $mod+b exec /usr/bin/bitwarden-desktop
 bindsym $mod+question exec /usr/bin/dunstctl history-pop
 bindsym $mod+Shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
-
 bindsym Print exec /usr/bin/flameshot gui
 
 # Titelbar verwijderen en borders
@@ -242,6 +241,9 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
 # Make things float
 for_window [app_id="org.kde.kcalc"] floating enable
 for_window [app_id="org.kde.kcalc"] nofocus
+
+# Cursor theme
+seat seat0 xcursor_theme Catppuccin-Frappe-Rosewater-Cursors 24
 
 # Mouse settings
 input "1133:16511:Logitech_G502" {
