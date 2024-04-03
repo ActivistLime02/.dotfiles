@@ -258,6 +258,13 @@ input "1267:12511:ELAN1405:00_04F3:30DF_Touchpad" {
     tap enabled
 }
 
+# Keyboard settings
+input * {
+    xkb_layout "us,us"
+    xkb_variant "altgr-intl,dvorak-alt-intl"
+    xkb_options "grp:rctrl_rshift_toggle"
+}
+
 # Display
 output "LG Electronics LG TV SSCR2 0x00000101" {
     mode 3840x2160@120.00Hz
