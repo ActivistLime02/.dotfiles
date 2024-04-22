@@ -156,7 +156,7 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-        "ignored-sinks": ["EasyEffects Sink"]
+        "ignored-sinks": ["Easy Effects Sink"]
     },
     "custom/media": {
         "format": "{icon} {}",
