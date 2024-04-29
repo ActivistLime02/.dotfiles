@@ -14,3 +14,7 @@ window#waybar {
 #workspaces button.focused {
     background: @surface1;
 }
+
+#workspaces button.urgent {
+    background: @red;
+}
