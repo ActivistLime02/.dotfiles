@@ -103,8 +103,6 @@ libva-utils
 libvirt
 links
 linux-firmware
-linux-lts
-linux-lts-headers
 lrzip
 lsp-plugins-lv2
 luarocks
@@ -130,7 +128,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 ntp
-nvidia-lts
+nvidia
 nvidia-prime
 nvidia-settings
 nvidia-utils
@@ -173,12 +171,11 @@ refind
 reflector
 remmina
 ripgrep
-rofi-lbonn-wayland
+rofi-wayland
 rog-control-center
 rsync
 ruby
 samba
-sanoid
 scrcpy
 screen
 sddm
@@ -234,7 +231,5 @@ xdg-desktop-portal-wlr
 yelp
 yt-dlp
 zam-plugins-lv2
-zfs-dkms
-zfs-utils
 zoxide
 zram-generator
