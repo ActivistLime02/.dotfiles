@@ -221,8 +221,12 @@ bindsym $mod+question exec /usr/bin/dunstctl history-pop
 bindsym $mod+Shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym Print exec /usr/bin/flameshot gui
 
+# Manage wallpapers
+bindsym $mod+o exec gwenview $(wpaperctl get-all | rofi -dmenu | cut -d' ' -f2)
+bindsym $mod+n exec wpaperctl next
+
 # Delete titelbar and borders
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
 
 # Apps or windows that should permanently float
@@ -230,7 +234,7 @@ for_window [app_id="org.kde.kcalc"] floating enable
 for_window [app_id="org.kde.kcalc"] nofocus
 
 # Cursor theme
-seat seat0 xcursor_theme Catppuccin-Frappe-Rosewater-Cursors 24
+seat seat0 xcursor_theme catppuccin-frappe-rosewater-cursors 24
 
 # Mouse settings
 input "1133:16511:Logitech_G502" {
@@ -252,14 +256,21 @@ input * {
     xkb_options "grp:rctrl_rshift_toggle"
 }
 
+output "Sony SONY TV  *30 0x01010101" {
+    scale 2
+    resolution 3840x2160
+    pos -1920 0
+}
+
 # Autostart
 exec wl-paste --watch cliphist store
 exec pasystray
 exec dunst
-#exec wpaperd
-exec swaybg -i ~/Pictures/kde-NEXT.png
+exec wpaperd -d
+#exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
 exec playerctld daemon
 exec /usr/lib/pam_kwallet_init
 exec poweralertd
 exec gammastep -O 6000
+exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj

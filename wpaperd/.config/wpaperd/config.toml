@@ -1,0 +1,12 @@
+[default]
+duration = "1h"
+sorting = "random"
+mode = "center"
+transition-time = "0ms"
+initial-transition = "False"
+
+[any]
+path = "/home/nick/Pictures/black.png"
+
+[eDP-1]
+path = "/home/nick/Pictures/achtergronden"
