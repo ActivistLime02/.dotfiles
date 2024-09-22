@@ -8,5 +8,10 @@ initial-transition = "False"
 [any]
 path = "/home/nick/Pictures/black.png"
 
-[eDP-1]
-path = "/home/nick/Pictures/achtergronden"
+[DP-1]
+path = "/home/nick/Pictures/wpaperd-achtergronden"
+duration = "30s"
+
+[HDMI-A-1]
+path = "/home/nick/Pictures/wpaperd-achtergronden"
+duration = "15m"
