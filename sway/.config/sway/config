@@ -259,10 +259,15 @@ input * {
     xkb_options "grp:rctrl_rshift_toggle"
 }
 
-output "Sony SONY TV  *30 0x01010101" {
-    scale 2
-    resolution 3840x2160
-    pos -1920 0
+output "Acer Technologies R271 T60EE0032410" {
+    resolution 1920x1080
+    pos 0 540
+}
+workspace 10 output HDMI-A-1
+
+output "LG Electronics LG TV SSCR2 0x01010101" {
+    resolution 3840x2160@120Hz
+    pos 1920 0
 }
 
 # Autostart
@@ -273,7 +278,7 @@ exec wpaperd -d
 #exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
 exec playerctld daemon
-exec /usr/lib/pam_kwallet_init
-exec poweralertd
-exec gammastep -O 6000
+#exec /usr/lib/pam_kwallet_init
+#exec poweralertd
+#exec gammastep -O 6000
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
