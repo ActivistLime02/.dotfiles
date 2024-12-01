@@ -2,8 +2,8 @@
 duration = "1h"
 sorting = "random"
 mode = "center"
-transition-time = "0ms"
-initial-transition = "False"
+transition-time = 0
+initial-transition = false
 
 [any]
 path = "/home/nick/Pictures/black.png"
