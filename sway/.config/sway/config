@@ -215,7 +215,8 @@ smart_borders on
 
 # Shortcuts to programs
 bindsym $mod+F1 exec /usr/bin/firefox
-bindsym $mod+F3 exec /usr/bin/thunar
+#bindsym $mod+F3 exec /usr/bin/thunar
+bindsym $mod+F3 exec /usr/bin/dolphin
 bindsym $mod+b exec /usr/bin/bitwarden-desktop
 bindsym $mod+question exec /usr/bin/dunstctl history-pop
 bindsym $mod+Shift+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
@@ -267,14 +268,25 @@ output "Sony SONY TV  *30 0x01010101" {
 }
 
 # Autostart
+# clipboard
 exec wl-paste --watch cliphist store
+# sound in tray
 exec pasystray
+# notifications
 exec dunst
+# wallpaper
 exec wpaperd -d
 #exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
+# I forgor
 exec playerctld daemon
+# kwallet in sway
 exec /usr/lib/pam_kwallet_init
+# Sometimes my laptop just turns off, turns out the battery is dead. So notifications are needed.
 exec poweralertd
+# Screen is too blue on my laptop, this will bring it a little more around 6500K.
 exec gammastep -O 6000
+# Mangohud CPU wattage fix for intel
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
+# fix dolphin not knowing which programs exists
+exec XDG_MENU_PREFIX=arch- kbuildsycoca6
