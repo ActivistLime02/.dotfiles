@@ -86,7 +86,8 @@
     },
     "clock": {
         "interval": 1,
-        "timezone": "Europe/Brussels",
+        //"timezone": "Europe/Brussels",
+        "timezone": "Asia/Shanghai",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M:%S | %Y-%m-%d | %A}",
         "format-alt": "{:%Y-%m-%d}",
@@ -159,7 +160,7 @@
         "ignored-sinks": ["Easy Effects Sink"]
     },
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon} {0}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {

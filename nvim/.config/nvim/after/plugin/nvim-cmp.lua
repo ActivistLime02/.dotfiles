@@ -13,5 +13,12 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.confirm({select = true}),
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
-    }
+    },
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+    }, {
+        { name = 'vim-dadbod-completion' },
+    }, {
+        { name = 'buffer' },
+    })
 })

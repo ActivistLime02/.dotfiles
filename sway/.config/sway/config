@@ -215,6 +215,7 @@ smart_borders on
 
 # Shortcuts to programs
 bindsym $mod+F1 exec /usr/bin/firefox
+#bindsym $mod+F3 exec /usr/bin/thunar
 bindsym $mod+F3 exec /usr/bin/dolphin
 bindsym $mod+b exec /usr/bin/bitwarden-desktop
 bindsym $mod+question exec /usr/bin/dunstctl history-pop
@@ -233,11 +234,12 @@ for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disa
 # Apps or windows that should permanently float
 for_window [app_id="org.kde.kcalc"] floating enable
 for_window [app_id="org.kde.kcalc"] nofocus
+for_window [app_id="one.alynx.showmethekey" title="Floating Window - Show Me The Key"] floating enable, sticky enable
 
 # Cursor settings
 seat seat0 xcursor_theme catppuccin-frappe-rosewater-cursors 24
-seat * hide_cursor 5000
-seat * hide_cursor when-typing enable
+seat * hide_cursor 10000
+#seat * hide_cursor when-typing enable
 
 # Mouse settings
 input "1133:16511:Logitech_G502" {
@@ -271,14 +273,31 @@ output "LG Electronics LG TV SSCR2 0x01010101" {
 }
 
 # Autostart
+# clipboard
 exec wl-paste --watch cliphist store
+# sound in tray
 exec pasystray
+# notifications
 exec dunst
+# wallpaper
 exec wpaperd -d
 #exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
+# I forgor
 exec playerctld daemon
+<<<<<<< HEAD
 #exec /usr/lib/pam_kwallet_init
 #exec poweralertd
 #exec gammastep -O 6000
+=======
+# kwallet in sway
+exec /usr/lib/pam_kwallet_init
+# Sometimes my laptop just turns off, turns out the battery is dead. So notifications are needed.
+exec poweralertd
+# Screen is too blue on my laptop, this will bring it a little more around 6500K.
+exec gammastep -O 6000
+# Mangohud CPU wattage fix for intel
+>>>>>>> laptop
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
+# fix dolphin not knowing which programs exists
+exec XDG_MENU_PREFIX=arch- kbuildsycoca6
