@@ -15,6 +15,7 @@ cmp.setup({
         ['<C-k>'] = cmp.mapping.select_prev_item(),
     },
     sources = cmp.config.sources({
+        { name = "jupynium", priority = 1000 },
         { name = 'nvim_lsp' },
     }, {
         { name = 'vim-dadbod-completion' },
