@@ -193,8 +193,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     swaybar_command waybar
-    mode hide
-    hidden_state hide
+    # mode hide
+    # hidden_state hide
 }
 
 # Move the currently focused window to the scratchpad
