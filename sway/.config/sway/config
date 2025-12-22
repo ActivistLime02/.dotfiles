@@ -158,7 +158,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'rm -f $HOME/.local/share/dbus-1/services/org.kde.kded6.service && swaymsg exit'
 bindsym $mod+Shift+w exec wlogout
 
 
@@ -193,8 +193,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     swaybar_command waybar
-    mode hide
-    hidden_state hide
+    # mode hide
+    # hidden_state hide
 }
 
 # Move the currently focused window to the scratchpad

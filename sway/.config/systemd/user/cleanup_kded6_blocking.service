@@ -1,0 +1,11 @@
+[Unit]
+Description=Delete modified kded6 service file, this is needed for system tray to show.
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecStop=rm -f %h/.local/share/dbus-1/services/org.kde.kded6.service
+
+[Install]
+WantedBy=default.target
