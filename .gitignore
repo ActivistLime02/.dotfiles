@@ -2,3 +2,4 @@ nvim/.config/nvim/plugin/packer_compiled.lua
 btop/.config/btop/btop.log
 fonts/.local/share/fonts/.uuid
 nvim/.config/nvim/lazy-lock.json
+lunarvim/.config/lvim/lazy-lock.json
