@@ -3,7 +3,8 @@
 #QT_WAYLAND_SHELL_INTEGRATION=xdg-shell \
 #eval $(keychain --eval --quiet id_ed25519 ~/.ssh/lvl27-nick)
 val=$(udevadm info -a -n /dev/dri/card1 | grep boot_vga | rev | cut -c 2)
-    WRL_DRM_DEVICES="/dev/dri/card$val" \
+WRL_DRM_DEVICES="/dev/dri/card$val" \
+    WLR_RENDERER=vulkan \
     QT_IM_MODULE=fcitx \
     XMODIFIERS=@im=fcitx \
     XDG_CURRENT_DESKTOP=sway \

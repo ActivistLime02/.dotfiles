@@ -272,6 +272,9 @@ output "LG Electronics LG TV SSCR2 0x01010101" {
     pos 1920 0
 }
 
+# D65 whitepoint at 100 nits (~70% brightness)
+output "Najing CEC Panda FPD Technology CO. ltd 0x0036 Unknown" color_profile icc ~/.local/share/color/GL531GU-internal-display.icm
+
 # Autostart
 # clipboard
 exec wl-paste --watch cliphist store
@@ -283,7 +286,7 @@ exec dunst
 exec wpaperd -d
 #exec swaybg -i ~/Pictures/kde-NEXT.png
 #exec ~/.config/sway/swaybg-wallpaper.sh
-# I forgor
+# The music thing on the taskbar. To see which song is playing
 exec playerctld daemon
 <<<<<<< HEAD
 #exec /usr/lib/pam_kwallet_init
@@ -294,8 +297,6 @@ exec playerctld daemon
 exec /usr/lib/pam_kwallet_init
 # Sometimes my laptop just turns off, turns out the battery is dead. So notifications are needed.
 exec poweralertd
-# Screen is too blue on my laptop, this will bring it a little more around 6500K.
-exec gammastep -O 6000
 # Mangohud CPU wattage fix for intel
 >>>>>>> laptop
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
