@@ -299,3 +299,5 @@ exec poweralertd
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
 # fix dolphin not knowing which programs exists
 exec XDG_MENU_PREFIX=arch- kbuildsycoca6
+# kde connect
+exec kdeconnectd
