@@ -261,11 +261,11 @@ input "1267:12511:ELAN1405:00_04F3:30DF_Touchpad" {
 }
 
 # Keyboard settings
-input * {
-    xkb_layout "us,us"
-    xkb_variant "altgr-intl,dvorak-alt-intl"
-    xkb_options "grp:rctrl_rshift_toggle"
-}
+# input * {
+#     xkb_layout "us,us"
+#     xkb_variant "altgr-intl,dvorak-alt-intl"
+#     xkb_options "grp:rctrl_rshift_toggle"
+# }
 
 include ./outputs
 
@@ -301,3 +301,5 @@ exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
 exec XDG_MENU_PREFIX=arch- kbuildsycoca6
 # kde connect
 exec kdeconnectd
+# fcitx5 for languages
+exec fcitx5

@@ -8,7 +8,6 @@
 # XDG_SESSION_DESKTOP=sway \
 # XDG_CURRENT_DESKTOP=sway \
 # SDL_VIDEODRIVER=wayland \
-export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export _JAVA_AWT_WM_NONREPARENTING=1
