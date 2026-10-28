@@ -3,6 +3,7 @@
 * {
   /* reference the color by using @color-name */
   color: @text;
+  font-family: "Noto Sans", "MesloLGS Nerd Font Propo", sans-serif;
 }
 
 window#waybar {
