@@ -1,0 +1,7 @@
+[Desktop Entry]
+# This should be in /usr/share/wayland-sessions/sway-user.desktop
+Name=Sway (Nick)
+Comment=An i3-compatible Wayland compositor
+Exec=/home/nick/.dotfiles/sway.sh
+Type=Application
+DesktopNames=sway;wlroots
