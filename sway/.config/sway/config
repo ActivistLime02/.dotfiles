@@ -294,7 +294,7 @@ exec playerctld daemon
 # kwallet in sway
 exec /usr/lib/pam_kwallet_init
 # Sometimes my laptop just turns off, turns out the battery is dead. So notifications are needed.
-exec poweralertd
+#exec poweralertd
 # Mangohud CPU wattage fix for intel
 exec sudo /bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj
 # fix dolphin not knowing which programs exists
