@@ -36,5 +36,8 @@ export CHROME_EXECUTABLE=google-chrome-stable
 # for android SDK
 export ANDROID_HOME=~/Android/Sdk/
 
+# For ssh agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # dbus-run-session sway --unsupported-gpu
 sway
