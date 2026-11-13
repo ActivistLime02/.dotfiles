@@ -99,3 +99,4 @@ xdg-desktop-portal-kde
 xdg-desktop-portal-wlr
 zoxide
 ncdu
+swayosd

@@ -42,14 +42,16 @@ for_window [app_id=".*"] inhibit_idle fullscreen
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec_always nm-applet --indicator
 
-# Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# SwayOSD shows a popup and changes volume/brightness.
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -285,6 +287,8 @@ exec wl-paste --watch cliphist store
 exec pasystray
 # notifications
 exec dunst
+# volume/brightness popup
+exec swayosd-server
 # wallpaper
 exec wpaperd -d
 #exec swaybg -i ~/Pictures/kde-NEXT.png

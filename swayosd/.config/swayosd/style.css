@@ -1,0 +1,19 @@
+/* Same Catppuccin colours as dunst */
+window#osd {
+	background: #1E1E2E;
+	border: 2px solid #89B4FA;
+	border-radius: 12px;
+}
+
+window#osd label,
+window#osd image {
+	color: #CDD6F4;
+}
+
+window#osd progressbar trough {
+	background: #313244;
+}
+
+window#osd progressbar progress {
+	background: #89B4FA;
+}
