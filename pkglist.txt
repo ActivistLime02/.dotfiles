@@ -100,3 +100,5 @@ xdg-desktop-portal-wlr
 zoxide
 ncdu
 swayosd
+difftastic
+mergiraf
