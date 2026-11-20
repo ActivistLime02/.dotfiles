@@ -26,3 +26,9 @@ import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
 [terminal]
 shell = "fish"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 150
+color = "#ffffff"
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/bell.oga"] }
